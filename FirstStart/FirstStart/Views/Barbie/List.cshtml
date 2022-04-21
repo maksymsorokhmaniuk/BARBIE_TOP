@@ -1,0 +1,27 @@
+﻿@using Barbie.Core;
+@model IEnumerable<Barbie>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+
+    <h2>Усі барбі )</h2>
+    @{
+        foreach (var barbie in Model)
+        {
+            <div>   
+            <h2> Модель @barbie.Name </h2>
+            <p> Короткий опис: @barbie.ShortDesc< /p>
+            </div>
+        }
+    }
+</body>
+</html>

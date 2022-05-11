@@ -19,4 +19,9 @@
     <ProjectReference Include="..\Barbie.Repositories\Barbie.Repositories.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Barbie\" />
+    <Folder Include="wwwroot\Imgs\" />
+  </ItemGroup>
+
 </Project>

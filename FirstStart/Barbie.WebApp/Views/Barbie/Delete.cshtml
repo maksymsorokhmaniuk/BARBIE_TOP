@@ -1,0 +1,37 @@
+﻿@model Barbie.Core.Barbiee 
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form method="post" asp-controller="Barbie" asp-action="DeleteBarbie">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Видалити</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label>Назва</label>
+            <input asp-for="Name" disabled class="form-control" />
+        </div> 
+        <div class="mb-3">
+            <label>Опис</label>
+            <input asp-for="Description" disabled class="form-control" />
+        </div> 
+        <div class="mb-3">
+            <label>Категорія</label>
+            <input value="@ViewBag.CategoryName" disabled class="form-control" />
+        </div> 
+        <div class="mb-3">
+            <img src="@("~/Imgs/"+Model.Img)" asp-append-version="true" width="150px" height="150px"/>
+        </div> 
+        <div class="form-group">
+            <input asp-for="Username" class="form-control" type="hidden" value="@User.Identity.Name.ToString()" />
+        </div> 
+        <button class="btn btn-danger" type="submit" style="width:150px">Видалити</button>
+        <a asp-controller="Barbie" asp-action="Index" class="btn btn-secondary" style="width:250px">
+            Назад до Каталогу
+        </a>
+    </div>
+</form>

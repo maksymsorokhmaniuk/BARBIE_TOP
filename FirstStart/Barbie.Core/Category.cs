@@ -8,10 +8,12 @@ namespace Barbie.Core
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { set;get; }
+        public int Id { set; get; }
+        [Required]
         public string CategoryName { set; get; }
-        public string Desc { set; get; }
-        public List<Barbiee> Barbies { get; set; }
+        [Required]
+        public string Username { set; get; }
+        public List<Barbiee>? Barbies { get; set; }
     }
 
 }
